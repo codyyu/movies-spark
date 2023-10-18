@@ -15,7 +15,7 @@ def main() -> None:
 
     df = (
         pl.scan_parquet(PROCESSED_DATASET_PATH)
-        .filter(pl.col("titleType") != "\\N")
+        .filter(pl.col("titleType") == "movie")
         .with_columns(
             pl.col("isAdult").map_dict(mapper, return_dtype=pl.Boolean).cast(pl.Boolean)
         )

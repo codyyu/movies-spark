@@ -7,6 +7,9 @@
 | Storage | Clickhouse |
 | Computation | Spark 3.4 |
 
+## Dataset
+IMDb: [link](https://developer.imdb.com/non-commercial-datasets/)
+
 ## TODO
 - [ ] Explore all pre-processed Dataset
 - [ ] Insert all datasets into Clickhouse

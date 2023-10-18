@@ -2,6 +2,7 @@
 
 ## TODO
 - [ ] Explore all pre-processed Dataset
+- [ ] Dataset cleaning
 - [ ] Insert all datasets into Clickhouse
 - [ ] Use Spark to query and produce matrices
 - [x] Set up Clickhouse environment

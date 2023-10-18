@@ -18,7 +18,9 @@ def main():
                     delimiter="\t", invalid_row_handler=invalid_row_handler
                 ),
             )
-            pa.write_table(data, f"data/processed/{file_name}.parquet.snappy")
+            pa.write_table(
+                data, f"data/processed/{file_name}.parquet", compression=None
+            )
         except:
             print(f"{file} error")
 

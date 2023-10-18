@@ -9,6 +9,11 @@
 - [x] Set up PySpark environment
 - [x] Test connection between Clickhouse and Spark 
 
+## Goals
+- Play with Polars' LazyFrame API (data transforming with lazy evaluation)
+- Play with Clickhouse
+- Play with Spark
+
 ## Tech Stack
 | Layer | Technology |
 |-------|------------|

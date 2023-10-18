@@ -12,3 +12,12 @@ services:
     ports:
       - 8123:8123
       - 9000:9000
+
+  pyspark-notebook:
+    image: jupyter/pyspark-notebook:spark-3.4.0
+    container_name: pyspark_notebook
+    volumes:
+      - ${PWD}/exploratory.ipynb:/home/jovyan/work/exploratory.ipynb
+    ports:
+      - 8888:8888
+      - 4040:4040

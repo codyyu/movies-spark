@@ -10,7 +10,7 @@
 - [x] Test connection between Clickhouse and Spark 
 
 ## Goals
-- Play with Polars' LazyFrame API (data transforming with lazy evaluation)
+- Play with Polars' [LazyFrame API](https://pola-rs.github.io/polars/py-polars/html/reference/lazyframe/index.html#) (data transforming with lazy evaluation)
 - Play with Clickhouse
 - Play with Spark
 

@@ -5,7 +5,7 @@
 
 CREATE DATABASE IF NOT EXISTS movies;
 
-CREATE TABLE IF NOT EXISTS movies.titles_akas (
+CREATE TABLE IF NOT EXISTS movies.title_akas (
     titleId String,
     ordering Int64,
     title String,
@@ -18,5 +18,22 @@ CREATE TABLE IF NOT EXISTS movies.titles_akas (
 ENGINE = MergeTree
 ORDER BY titleId;
 
-INSERT INTO movies.titles_akas
-FROM INFILE 'data/processed/title-akas.parquet' FORMAT Parquet
+INSERT INTO movies.title_akas
+FROM INFILE 'data/clean/title-akas.parquet' FORMAT Parquet;
+
+CREATE TABLE IF NOT EXISTS movies.title_basics (
+    tconst String,
+    titleType String,
+    primaryTitle String,
+    originalTitle String,
+    isAdult Boolean,
+    startYear String,
+    endYear String,
+    runtimeMinutes String,
+    genres String
+)
+ENGINE = MergeTree
+ORDER BY tconst;
+
+INSERT INTO movies.title_basics
+FROM INFILE 'data/clean/title-basics.parquet' FORMAT Parquet;

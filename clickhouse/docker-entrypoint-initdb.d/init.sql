@@ -11,12 +11,12 @@ CREATE TABLE IF NOT EXISTS movies.titles_akas (
     title String,
     region String,
     language String,
-    types Array(String),
-    attributes Array(String),
+    types String,
+    attributes String,
     isOriginalTitle Boolean
 )
 ENGINE = MergeTree
 ORDER BY titleId;
 
--- INSERT INTO movies.titles_akas
--- FROM INFILE 'data/processed/title-akas.parquet.snappy' FORMAT Parquet
+INSERT INTO movies.titles_akas
+FROM INFILE 'data/processed/title-akas.parquet' FORMAT Parquet

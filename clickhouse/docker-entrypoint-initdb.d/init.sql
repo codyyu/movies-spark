@@ -37,3 +37,14 @@ ORDER BY tconst;
 
 INSERT INTO movies.title_basics
 FROM INFILE 'data/clean/title-basics.parquet' FORMAT Parquet;
+
+CREATE TABLE IF NOT EXISTS movies.title_crew (
+    tconst String,
+    directors String,
+    writers String
+)
+ENGINE = MergeTree
+ORDER BY tconst;
+
+INSERT INTO movies.title_crew
+FROM INFILE 'data/clean/title-crew.parquet' FORMAT Parquet;
